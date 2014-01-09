@@ -1,0 +1,2 @@
+---
+nsq_download_location: "https://s3.amazonaws.com/bitly-downloads/nsq/{{ nsq_tarball }}"

@@ -1,0 +1,15 @@
+---
+- name: Download the NSQ tarball
+  get_url: url={{ nsq_download_location }}
+           dest=/usr/local/src/{{ nsq_tarball }}
+           sha256sum={{ nsq_tarball_checksum }}
+
+- name: Prepare to Extract NSQ
+  command: mkdir /usr/local/nsq
+
+- name: Extract the NSQ tarball
+  command: tar -C /usr/local/nsq --strip-components=1 -xf /usr/local/src/{{ nsq_tarball }}
+
+- name: Add the NSQ bin directory to the PATH environment variable for all users
+  copy: src=nsq-bin.sh
+        dest=/etc/profile.d

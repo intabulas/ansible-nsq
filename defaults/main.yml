@@ -1,0 +1,4 @@
+---
+nsq_directory: "nsq-0.2.24.linux-amd64.go1.1.2"
+nsq_tarball: "{{ nsq_directory }}.tar.gz"
+nsq_tarball_checksum: "0b773869313e6f60ed7ccbf51ab07ef49882db09f63e6a8b8dc16c97a9294a43"
